@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Plans - Catch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-brand">
+            <img src="img.jpg" alt="logo" width="40" height="40">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="start.html">Get Started</a></li>
+            <li><a href="find.html">Explore</a></li>
+            <li><a href="chat.html">Chats</a></li>
+            <li><a href="plans.html" class="active">Payment Plans</a></li>
+            <li>
+                <a href="profile.html" class="profile-nav-link" title="My Profile">
+                    <div id="header-avatar" class="header-profile-avatar">
+                        <span id="header-avatar-initial">U</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main class="main-body">
+        <h3>Catch Subscription Plans</h3>
+        <p>Choose a plan that fits your style. See who viewed your account and unlock premium features!</p>
+
+        <div class="slideshow-container">
+            <div class="slideshow-tabs">
+                <button class="slide-tab active" onclick="showPlanSlide(0)">Free Plan</button>
+                <button class="slide-tab" onclick="showPlanSlide(1)">Standard Plan</button>
+                <button class="slide-tab" onclick="showPlanSlide(2)">Premium Plan [Verified]</button>
+            </div>
+
+            <div class="plan-slide active-slide" id="slide-0">
+                <h4>Free Plan</h4>
+                <p class="plan-price">UGX 0</p>
+                <ul class="plan-benefits">
+                    <li>Basic profile creation and photo upload</li>
+                    <li>Standard matching and explore feed</li>
+                    <li>Send message requests</li>
+                </ul>
+                <button class="btn secondary" disabled>Current Plan</button>
+            </div>
+
+            <div class="plan-slide" id="slide-1">
+                <h4>Standard Plan</h4>
+                <p class="plan-price">UGX 5,000 / week</p>
+                <ul class="plan-benefits">
+                    <li>Unlimited profile swipes</li>
+                    <li>Priority message requests delivery</li>
+                    <li>See who liked your profile</li>
+                </ul>
+                <a href="#payment-methods-section" class="btn select-plan-btn" data-plan="Standard Plan" data-amount="5000">Proceed to Payment</a>
+            </div>
+
+            <div class="plan-slide" id="slide-2">
+                <h4>Premium Plan <span class="blue-verified-badge" title="Blue Verified Sticker">Verified</span></h4>
+                <p class="plan-price">UGX 12,000 / month</p>
+                <ul class="plan-benefits">
+                    <li><strong>See who has viewed your account</strong></li>
+                    <li>Exclusive <strong>Blue Verified Sticker</strong> on your profile</li>
+                    <li>Unlimited direct messaging without waiting</li>
+                    <li>Top visibility in regional feeds</li>
+                </ul>
+                <a href="#payment-methods-section" class="btn premium-glow select-plan-btn" data-plan="Premium Plan" data-amount="12000">Get Premium</a>
+            </div>
+        </div>
+
+        <hr class="divider" style="margin: 30px 0; border: none; border-top: 1px dashed #cbd5e1;">
+
+        <div id="payment-methods-section" class="payment-section">
+            <h3>Choose a Payment Method</h3>
+            <p id="selected-summary">Selected Plan: <strong>Standard Plan (UGX 5,000)</strong></p>
+
+            <div class="payment-options">
+                <label class="payment-option">
+                    <input type="radio" name="payment-method" value="mtn" checked>
+                    <div class="option-content">
+                        <div>
+                            <strong>MTN Mobile Money</strong>
+                            <p>Instant USSD prompt to your MTN line</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment-method" value="airtel">
+                    <div class="option-content">
+                        <div>
+                            <strong>Airtel Money</strong>
+                            <p>Instant USSD prompt to your Airtel line</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment-method" value="card">
+                    <div class="option-content">
+                        <div>
+                            <strong>Credit / Debit Card</strong>
+                            <p>Visa, Mastercard, or local bank card</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div id="payment-input-container" class="payment-inputs">
+                <div class="form-group" id="phone-input-group">
+                    <label for="checkout-phone">Mobile Money Number:</label>
+                    <input type="tel" id="checkout-phone" placeholder="077XXXXXXX or 070XXXXXXX">
+                </div>
+
+                <button id="btn-complete-payment" class="btn">Pay Now</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Catch. All rights reserved.</p>
+        <p>Built for genuine connections</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chats - Catch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-brand">
+            <img src="img.jpg" alt="logo" width="40" height="40">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="start.html">Get Started</a></li>
+            <li><a href="find.html">Explore</a></li>
+            <li><a href="chat.html" class="active">Chats</a></li>
+            <li><a href="plans.html">Payment Plans</a></li>
+            <li>
+                <a href="profile.html" class="profile-nav-link" title="My Profile">
+                    <div id="header-avatar" class="header-profile-avatar">
+                        <span id="header-avatar-initial">U</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main class="main-body">
+        <h3>Your Conversations</h3>
+        
+        <div id="chat-list" class="whatsapp-chat-list">
+            <div id="no-messages-state" class="empty-state">
+                <h3>No current messages</h3>
+                <p>You haven't started any conversations yet. Connect with people on the explore page to begin chatting!</p>
+                <button class="btn" onclick="window.location.href='find.html'">Start a Message from Explore</button>
+            </div>
+        </div>
+
+        <div id="message-requests-section" class="requests-section hidden">
+            <h4>Pending Message Requests</h4>
+            <div id="requests-list"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Catch. All rights reserved.</p>
+        <p>Built for genuine connections</p>
+    </footer>
+</body>
+</html>

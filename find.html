@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Matches - Catch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-brand">
+            <img src="img.jpg" alt="logo" width="40" height="40">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="start.html">Get Started</a></li>
+            <li><a href="find.html" class="active">Explore</a></li>
+            <li><a href="chat.html">Chats</a></li>
+            <li><a href="plans.html">Payment Plans</a></li>
+            <li>
+                <a href="profile.html" class="profile-nav-link" title="My Profile">
+                    <div id="header-avatar" class="header-profile-avatar">
+                        <span id="header-avatar-initial">U</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main class="main-body">
+        <h3>Discover Nearby Matches</h3>
+        
+        <div id="recommendations-container">
+            <div id="no-recommendations" class="empty-card">
+                <h3>No current recommendations in your area</h3>
+                <p>No profiles available yet. Be the first to upload your picture and join the community!</p>
+                <button class="btn" onclick="window.location.href='start.html'">Upload Profile & Picture</button>
+            </div>
+
+            <div id="profile-card" class="card hidden">
+                <div class="card-image-wrapper">
+                    <img id="profile-img" src="" alt="Profile Photo">
+                    <span id="profile-badge" class="badge-verified">Verified</span>
+                </div>
+                <div class="card-info">
+                    <h3 id="profile-name"></h3>
+                    <p id="profile-location"></p>
+                    <p id="profile-bio"></p>
+                </div>
+                <div class="card-actions">
+                    <button id="btn-pass" class="btn-action pass">Pass</button>
+                    <button id="btn-message-request" class="btn-action request">Request</button>
+                    <button id="btn-like" class="btn-action like">Like</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Catch. All rights reserved.</p>
+        <p>Built for genuine connections</p>
+    </footer>
+</body>
+</html>

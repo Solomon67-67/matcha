@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - Catch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-brand">
+            <img src="img.jpg" alt="logo" width="40" height="40">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="start.html" class="active">Get Started</a></li>
+            <li><a href="find.html">Explore</a></li>
+            <li><a href="chat.html">Chats</a></li>
+            <li><a href="plans.html">Payment Plans</a></li>
+            <li>
+                <a href="profile.html" class="profile-nav-link" title="My Profile">
+                    <div id="header-avatar" class="header-profile-avatar">
+                        <span id="header-avatar-initial">U</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main class="container">
+        <h2>Create Your Profile</h2>
+        <p class="subtitle">Set up your account to start exploring nearby matches.</p>
+
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" placeholder="e.g. Sarah Namubiru" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" min="18" max="99" placeholder="22" required>
+                </div>
+                <div class="form-group half">
+                    <label for="location">Location:</label>
+                    <select id="location">
+                        <option value="Kampala">Kampala</option>
+                        <option value="Entebbe">Entebbe</option>
+                        <option value="Jinja">Jinja</option>
+                        <option value="Mbarara">Mbarara</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Mobile Money Number (MTN / Airtel):</label>
+                <input type="tel" id="phone" placeholder="077XXXXXXX or 070XXXXXXX" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bio">Bio / About You:</label>
+                <textarea id="bio" rows="3" placeholder="Tell people what you like doing..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="signup-photo">Profile Photo (Optional for now):</label>
+                <input type="file" id="signup-photo" accept="image/*">
+                <small class="help-text" style="color: #64748b; font-size: 0.8rem; margin-top: 4px; display: block;">You can skip this now, but you will need a photo to start conversations.</small>
+            </div>
+
+            <button type="submit" class="btn full-width">Complete Profile</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Catch. All rights reserved.</p>
+        <p>Built for genuine connections</p>
+    </footer>
+</body>
+</html>

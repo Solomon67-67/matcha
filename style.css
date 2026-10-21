@@ -1,0 +1,373 @@
+/* ==========================================
+   Global & Layout Styling
+   ========================================== */
+
+   
+   /* Prevent horizontal scrolling across all screens */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Stops horizontal scrolling */
+}
+
+/* Ensure app containers never exceed screen size */
+.app-container, .card, .header, .nav-bar {
+  width: 100%;
+  max-width: 480px; /* Standard mobile app width limit */
+  margin: 0 auto;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f1f5f9;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 0;
+}
+
+p {
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* ==========================================
+   Header & Navigation
+   ========================================== */
+header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    border-bottom: 3px solid #00b4d8;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-brand img {
+    border-radius: 50%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.nav-links li a.active, 
+.nav-links li a:hover {
+    background: #00b4d8;
+    color: #ffffff;
+}
+
+/* Top-Right Circular Profile Avatar Link */
+.profile-nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+.header-profile-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #00b4d8;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid #ffffff;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 180, 216, 0.4);
+    transition: transform 0.2s ease;
+}
+
+.header-profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-profile-avatar:hover {
+    transform: scale(1.08);
+}
+
+/* ==========================================
+   Attractive Main Card Containers
+   ========================================== */
+.container, .main-body {
+    flex: 1;
+    max-width: 620px;
+    width: 90%;
+    margin: 30px auto;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.subtitle {
+    margin-top: -10px;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+/* Buttons */
+.btn {
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 180, 216, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 180, 216, 0.35);
+}
+
+.btn.full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn.secondary {
+    background: #f1f5f9;
+    color: #475569;
+    box-shadow: none;
+}
+
+.btn.danger-btn {
+    background: #ef4444;
+    color: white;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group.half {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background: #f8fafc;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #00b4d8;
+    outline: none;
+    background: #ffffff;
+}
+
+/* Explore Card Styling */
+.card {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    background: #0f172a;
+    color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card-image-wrapper {
+    position: relative;
+    height: 380px;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge-verified {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #10b981;
+    color: white;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+.card-info {
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0 16px 0;
+    background: #111;
+}
+
+.btn-action {
+    background: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Empty States */
+.empty-card, .empty-state {
+    background: #ffffff;
+    border: 2px dashed #00b4d8;
+    border-radius: 14px;
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 380px;
+    margin: 20px auto;
+}
+
+/* Profile Page Section */
+.profile-header-card {
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #f1f5f9;
+    margin-bottom: 25px;
+}
+
+.large-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 auto 15px auto;
+    overflow: hidden;
+}
+
+.large-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge-tier {
+    background: #e0f2fe;
+    color: #0369a1;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.settings-section {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Footer */
+footer {
+    background: #0f172a;
+    color: #64748b;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+footer p {
+    color: #64748b;
+    margin: 4px 0;
+}
+
+.hidden {
+    display: none !important;
+}
